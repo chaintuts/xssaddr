@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<!-- This file contains markup for the Cross-Site Scripting (XSS) BTC deposit webpage
+-
+- Author: Josh McIntyre
+-->
+<html>
+
+<!-- Mark up meta information
+-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Address XSS Demo</title>
+	
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<script src="xssaddrlib.js" type="text/javascript"></script>
+	<script src="xssaddr.js" type="text/javascript"></script>
+	
+</head>
+
+<!--Mark up body -->
+<body onload="fetchAndSetUserId()">
+		
+		<h3>Cross-Site Scripting (XSS) Demo</h3>
+
+			<label for="userid">Welcome back, UserId:</label>
+			<div name="userid" id="userid"></div><br>
+			
+			<button type="button" id="generate" onclick="fetchAndSetAddress()">Generate Deposit Address</button><br><br>
+
+			<label for="address" id="addresslabel"></label><br>
+			<div name="address" id="address"></div>
+			
+
+</body>
+
+</html>
